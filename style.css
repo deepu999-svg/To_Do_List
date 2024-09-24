@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+.container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    width: 300px;
+    text-align: center;
+    transition: 1s;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 3px;
+    background-color: #2e2e2e;
+    color: #00ff00;
+}
+
+.interactive-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00ff00;
+    color: #121212;
+    border-radius: 3px;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.interactive-button:hover {
+    background-color: #00cc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #2e2e2e;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li::before {
+    content: '✔';
+    font-size: 1.2em;
+    color: #00ff00;
+    margin-right: 10px;
+    display: none;
+}
+
+li.completed::before {
+    display: inline;
+}
